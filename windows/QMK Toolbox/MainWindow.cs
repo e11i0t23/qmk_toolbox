@@ -154,7 +154,7 @@ namespace QMK_Toolbox
             _usb = new Usb(_flasher, _printer);
             _flasher.Usb = _usb;
 
-            StartListeningForDeviceEvents();
+            //StartListeningForDeviceEvents();
         }
 
         private void logTextBox_TextChanged(object sender, EventArgs e)
@@ -597,6 +597,7 @@ namespace QMK_Toolbox
             (sender as ManagementEventWatcher)?.Start();
         }
 
+        /*
         private void StartListeningForDeviceEvents()
         {
             StartManagementEventWatcher("__InstanceCreationEvent");
@@ -609,6 +610,7 @@ namespace QMK_Toolbox
             watcher.EventArrived += DeviceEvent;
             watcher.Start();
         }
+        */
 
         private void autoflashCheckbox_CheckedChanged(object sender, EventArgs e)
         {
